@@ -1,0 +1,32 @@
+[
+    {
+        "image": "light-bulb.png",
+        "title": "Idea Generation",
+        "alt": ""
+    },
+    {
+        "image": "application-design.png",
+        "title": "Application Design",
+        "alt": ""
+    },
+    {
+        "image": "market-research.png",
+        "title": "Market Research",
+        "alt": ""
+    },
+    {
+        "image": "business-partnerships.png",
+        "title": "Business Partnerships",
+        "alt": ""
+    },
+    {
+        "image": "application-development.png",
+        "title": "Application Development",
+        "alt": ""
+    },
+    {
+        "image": "checkmark.png",
+        "title": "Quality Assurance",
+        "alt": ""
+    }
+]

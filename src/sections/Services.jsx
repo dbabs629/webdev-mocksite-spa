@@ -4,17 +4,18 @@ import ServicesCard from '../components/ServicesCard'
 
 function Services() {
   return (
-    <section className='relative services'>
+    <section className='services'>
       <div>
         <Heading heading='Services' />
       </div>
-      <div className='max-w-full flex flex-col items-center justify-center lg:flex-row lg:flex-wrap'>
+      <div className='card-wrapper'>
         {servicesList.map((item, i) => (
           <ServicesCard
             key={i}
             image={item.image}
-            title={item.title}
             alt={item.alt}
+            title={item.title}
+            text={item.text}
           />
         ))}
       </div>

@@ -1,32 +1,38 @@
 [
     {
-        "image": "light-bulb.png",
+        "image": "./assets/light-bulb.png",
+        "alt": "",
         "title": "Idea Generation",
-        "alt": ""
+        "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor. Adipiscing elit, sed do eiusmod tempor."
     },
     {
-        "image": "application-design.png",
+        "image": "./assets/application-design.png",
+        "alt": "",
         "title": "Application Design",
-        "alt": ""
+        "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor. Adipiscing elit, sed do eiusmod tempor."
     },
     {
-        "image": "market-research.png",
+        "image": "./assets/market-research.png",
+        "alt": "",
         "title": "Market Research",
-        "alt": ""
+        "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor. Adipiscing elit, sed do eiusmod tempor."
     },
     {
-        "image": "business-partnerships.png",
+        "image": "./assets/business-partnerships.png",
+        "alt": "",
         "title": "Business Partnerships",
-        "alt": ""
+        "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor. Adipiscing elit, sed do eiusmod tempor."
     },
     {
-        "image": "application-development.png",
+        "image": "./assets/application-development.png",
+        "alt": "",
         "title": "Application Development",
-        "alt": ""
+        "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor. Adipiscing elit, sed do eiusmod tempor."
     },
     {
-        "image": "checkmark.png",
+        "image": "./assets/checkmark.png",
+        "alt": "",
         "title": "Quality Assurance",
-        "alt": ""
+        "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor. Adipiscing elit, sed do eiusmod tempor."
     }
 ]

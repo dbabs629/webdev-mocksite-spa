@@ -1,18 +1,18 @@
 [
     {
-        "image": "photo-by-saketh-garuda-on-unsplash.jpg",
+        "image": "./assets/photo-by-saketh-garuda-on-unsplash.jpg",
         "alt": "Looking through Eye glasses of a city landscape",
         "title": "Vision & Direction",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
     },
     {
-        "image": "photo-by-william-hook-on-unsplash.jpg",
+        "image": "./assets/photo-by-william-hook-on-unsplash.jpg",
         "alt": "Smartphone screen with several application icons",
         "title": "Digital Solutions",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
     },
     {
-        "image": "photo-by-krakenimages-on-unsplash.jpg",
+        "image": "./assets/photo-by-krakenimages-on-unsplash.jpg",
         "alt": "a man and a woman sitting, smiling and high fiving in at a table with papers and a laptop on it",
         "title": "Quality Support",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"

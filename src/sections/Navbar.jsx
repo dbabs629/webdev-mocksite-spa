@@ -1,9 +1,9 @@
 function Navbar() {
   return (
-    <nav className='smooth flex flex-row justify-between items-center text-white'>
+    <nav className='smooth absolute z-20 left-0 top-0 right-0 p-5 xl:px-40 flex flex-row justify-between items-center text-white'>
       <div
         id='logo'
-        className='smooth text-lg font-bold md:text-2xl xl:text-3xl'>
+        className='smooth text-lg font-bold md:text-2xl lg:text-3xl'>
         Webdevs
       </div>
 
@@ -19,7 +19,7 @@ function Navbar() {
       {/* Desktop/Tablet Menu */}
       <ul
         id='navList'
-        className='smooth hidden space-x-6 font-semibold cursor-pointer md:flex lg:space-x-8 lg:text-lg xl:text-xl'>
+        className='smooth hidden space-x-6 font-semibold cursor-pointer md:flex lg:space-x-8 lg:text-lg'>
         <li>Services</li>
         <li>Work</li>
         <li>Team</li>

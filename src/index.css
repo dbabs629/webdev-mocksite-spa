@@ -53,7 +53,6 @@
       'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    @apply p-5 xl:px-40;
   }
 
   code {
@@ -65,35 +64,67 @@
     @apply smooth text-lg text-slate-800 font-semibold;
   }
 
-  ul li:hover {
+  h5 {
+    @apply text-base font-semibold sm:text-xl lg:font-bold lg:text-2xl;
+  }
+
+  nav li:hover {
     @apply smooth hover:scale-110;
   }
 
   section {
-    @apply mt-14 md:mt-24 md:mb-36 lg:mt-44 lg:mb-44 xl:mt-60 xl:mb-72 border-2;
+    @apply px-4 xl:px-40 py-20 md:pt-32 lg:pt-40 xl:pt-48;
   }
 
-  .services::after {
-    @apply absolute top-0 left-0 right-0 bottom-0 w-full h-96 bg-[#08142e];
+  footer {
+    @apply relative px-4 py-10 text-white;
+  }
+
+  footer ::before {
+    content: '';
+    background-position: 25% 20%;
+    @apply overlay -z-20 w-full h-full  bg-[url('../public/assets/global-image.jpg')] bg-no-repeat bg-cover bg-origin-content opacity-30;
+  }
+
+  footer p,
+  li,
+  a {
+    @apply text-xs font-thin sm:text-sm xl:text-base;
+  }
+
+  footer li {
+    @apply hover:font-semibold;
   }
 }
 
-@layer components {
-  .card {
-    @apply w-20 h-24 p-10 flex flex-col border-2 border-[#2378FF];
-  }
+/* mt-14 mb-24 md:mt-24 md:mb-36 lg:mt-36 lg:mb-44 xl:mt-48 xl:mb-60 */
 
+@layer components {
   .smooth {
     @apply duration-300 ease-in-out;
+  }
+
+  .overlay {
+    @apply smooth absolute top-0 left-0 bottom-0 right-0 w-full h-full;
   }
 
   .responsiveText {
     @apply sm:font-light md:font-normal md:text-lg lg:font-semibold lg:text-xl xl:text-2xl;
   }
+
+  .card-wrapper {
+    @apply smooth w-full mx-auto grid grid-cols-1 gap-10 justify-evenly lg:grid-cols-3 lg:gap-6;
+  }
+
+  .card {
+    @apply relative max-w-xs flex flex-col mx-auto w-full h-80 gap-4 justify-center items-center text-center text-sm lg:max-w-full;
+  }
+  .card-outline {
+    @apply border-2 border-[#f7f9ff] shadow-lg shadow-[#e8edfd] rounded-lg;
+  }
 }
 
-.hero::after {
-  content: '';
+.hero-span {
   background-image: linear-gradient(
       to right,
       rgba(0, 20, 200, 0.95),
@@ -103,8 +134,47 @@
     ),
     url('../public/assets/mobile-prototype-bg.png');
   background-position: 0% 20%;
-  @apply absolute top-0 left-0 right-0 bottom-0 -z-10 max-w-full max-h-96 bg-no-repeat bg-cover bg-origin-content opacity-75 md:max-h-full md:h-[55%] lg:h-[60%] xl:h-[80%] 2xl:h-[80%];
+  @apply overlay -z-10 w-full h-full bg-no-repeat bg-cover bg-origin-content opacity-75;
 }
+
+/* md:h-[calc(var(.hero))] */
+
+/* SERVICES CARD GRADIENT ON HOVER */
+.services .card:hover ::after {
+  content: '';
+  background-color: white;
+  background-image: linear-gradient(
+    to top right,
+    rgba(0, 20, 200, 0.75),
+    rgba(0, 35, 165, 0.6),
+    rgba(155, 65, 0, 0.6),
+    rgba(175, 75, 0, 0.75)
+  );
+  @apply overlay -z-10 max-w-full max-h-96 bg-no-repeat rounded-lg;
+}
+
+.services .card:hover h3 {
+  @apply text-white;
+}
+
+.services .card:hover p {
+  @apply text-white;
+}
+
+.work .card ::after {
+  content: '';
+  @apply smooth overlay -z-10 bg-gradient-to-t from-zinc-800 to-transparent;
+}
+
+.work .card:hover ::after {
+  content: '';
+  @apply smooth bg-zinc-300 opacity-50 rounded-lg;
+}
+
+/* .workImg::after {
+  content: '';
+  @apply z-10 absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-gradient-to-t from-black bg-no-repeat bg-cover;
+} */
 /* md:max-h-full md:h-[12%] lg:h-[26%] 2xl:h-[32%] */
 /* .heading::after {
   @apply absolute top-0 left-0 right-0 bottom-0 w-[100px] h-[100px] px-5 py-1 bg-orange-500;
@@ -125,3 +195,16 @@
   background-position: 25% 35%;
   z-index: -10;
 } */
+
+/* .services-gradient::before {
+    content: '';
+    z-index: -10;
+    background-image: linear-gradient(
+      to top right,
+      rgba(0, 20, 200, 0.95),
+      rgba(0, 35, 165, 0.75),
+      rgba(155, 65, 0, 0.75),
+      rgba(175, 75, 0, 0.95)
+    );
+    @apply overlay -z-10 max-w-full max-h-96 bg-no-repeat opacity-75;
+  } */

@@ -1,0 +1,38 @@
+[
+    {
+        "image": "./assets/photo-by-lukas-blazek-on-unsplash.jpg",
+        "alt": "",
+        "title": "Data Management",
+        "text": "Technologies and the Processes"
+    },
+    {
+        "image": "./assets/photo-by-rahul-chakraborty-on-unsplash.jpg",
+        "alt": "Smartphone screen with several application icons",
+        "title": "Software Development",
+        "text": "Technologies and the Processes"
+    },
+    {
+        "image": "./assets/photo-by-luke-chesser-on-unsplash.jpg",
+        "alt": "",
+        "title": "Quality Support",
+        "text": "Technologies and the Processes"
+    },
+    {
+        "image": "./assets/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg",
+        "alt": "",
+        "title": "IT Consultancy",
+        "text": "Technologies and the Processes"
+    },
+    {
+        "image": "./assets/juliana-kozoski-IoQioGLrz3Y-unsplash.jpg",
+        "alt": "",
+        "title": "Digital Marketing",
+        "text": "Technologies and the Processes"
+    },
+    {
+        "image": "./assets/photo-by-charlesdeluvio-on-unsplash.jpg",
+        "alt": "",
+        "title": "eCommerce",
+        "text": "Technologies and the Processes"
+    }
+]

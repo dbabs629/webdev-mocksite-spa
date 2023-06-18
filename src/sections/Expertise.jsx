@@ -1,5 +1,5 @@
 import Heading from '../components/Heading'
-import ExpertiseList from '../data/expertiseList.json'
+import expertiseList from '../data/expertiseList.json'
 import ExpertiseCard from '../components/ExpertiseCard'
 
 function Expertise() {
@@ -8,8 +8,8 @@ function Expertise() {
       <div>
         <Heading heading='Expertise' />
       </div>
-      <div className='flex flex-col items-center lg:flex-row lg:space-x-5 lg:justify-center'>
-        {ExpertiseList.map((item, i) => (
+      <div className='card-wrapper'>
+        {expertiseList.map((item, i) => (
           <ExpertiseCard
             key={i}
             image={item.image}

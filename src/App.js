@@ -14,8 +14,8 @@ function App() {
       <Navbar />
       <main className='App'>
         <Hero />
-        <Expertise />
         <Services />
+        <Expertise />
         <Work />
         <Team />
         <Reviews />

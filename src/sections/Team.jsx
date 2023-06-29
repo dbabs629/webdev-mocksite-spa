@@ -1,21 +1,21 @@
 import Heading from '../components/Heading'
-import TeamCard from '../components/TeamCard'
+import Card from '../components/Card'
 import teamList from '../data/teamList.json'
 
 function Team() {
   return (
-    <section className='services'>
+    <section id='team'>
       <div>
         <Heading heading='Meet The Team' />
       </div>
-      <div className='card-wrapper'>
+      <div className='card-wrapper [&>*]:pt-0'>
         {teamList.map((item, i) => (
-          <TeamCard
+          <Card
             key={i}
             image={item.image}
             alt={item.alt}
-            name={item.name}
             title={item.title}
+            job={item.job}
           />
         ))}
       </div>

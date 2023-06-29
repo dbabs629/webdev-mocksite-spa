@@ -1,32 +1,32 @@
 [
     {
         "image": "./assets/dbabs_face_photo_wearing_suit_and_smiling_c4293f50-f6ab-46be-a98c-45c75c1fcacb.png",
-        "name": "Fredrick Poppins",
+        "title": "Fredrick Poppins",
         "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor.",
-        "title": "Vice President of Global Management"
+        "job": "Vice President of Global Management"
     },
     {
         "image": "./assets/dbabs_photo_face_smile_female_professional_wearing_suit_82038beb-62d5-4409-8fbb-b866fb0571e2.png",
-        "name": "Fredrick Poppins",
+        "title": "Fredrick Poppins",
         "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor. Adipiscing elit, sed do eiusmod tempor. ipsum dolor sit amet, adipiscing elit, sed do eiusmod.",
-        "title": "Vice President of Global Management"
+        "job": "Vice President of Global Management"
     },
     {
         "image": "./assets/dbabs_profile_photo_smiling_in_suit_10644a80-956e-491f-9fce-33f4f8891881.png",
-        "name": "Fredrick Poppins",
+        "title": "Fredrick Poppins",
         "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor.",
-        "title": "Vice President of Global Management"
+        "job": "Vice President of Global Management"
     },
     {
         "image": "./assets/dbabs_photo_face_smile_female_professional_wearing_suit_82038beb-62d5-4409-8fbb-b866fb0571e2.png",
-        "name": "Fredrick Poppins",
+        "title": "Fredrick Poppins",
         "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor. Adipiscing elit, sed do eiusmod tempor. ipsum dolor sit amet, adipiscing elit, sed do eiusmod.",
-        "title": "Vice President of Global Management"
+        "job": "Vice President of Global Management"
     },
     {
         "image": "./assets/dbabs_photo_face_subtle_smile_female_professional_wearing_suit_86878669-cf75-4e96-8983-41e398d98b8c.png",
-        "name": "Fredrick Poppins",
+        "title": "Fredrick Poppins",
         "text": "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor. Adipiscing elit, sed do eiusmod tempor. ipsum dolor sit amet, adipiscing elit, sed do eiusmod.",
-        "title": "Vice President of Global Management"
+        "job": "Vice President of Global Management"
     }
 ]

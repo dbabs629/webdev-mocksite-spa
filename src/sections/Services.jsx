@@ -1,16 +1,20 @@
 import Heading from '../components/Heading'
 import servicesList from '../data/servicesList.json'
-import ServicesCard from '../components/ServicesCard'
+import Card from '../components/Card'
+import SliderComp from '../components/SliderComp'
 
 function Services() {
   return (
-    <section className='services'>
+    <section id='services'>
       <div>
         <Heading heading='Services' />
       </div>
-      <div className='card-wrapper'>
+      <div className='lg:hidden'>
+        <SliderComp version={1} list={servicesList} />
+      </div>
+      <div className='card-wrapper hidden lg:grid [&>*]:cursor-pointer [&>*:hover]:scale-105 [&>*:hover]:bg-blue-500 [&>*:hover]:text-white'>
         {servicesList.map((item, i) => (
-          <ServicesCard
+          <Card
             key={i}
             image={item.image}
             alt={item.alt}

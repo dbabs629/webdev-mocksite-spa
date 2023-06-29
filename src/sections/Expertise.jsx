@@ -1,16 +1,16 @@
 import Heading from '../components/Heading'
 import expertiseList from '../data/expertiseList.json'
-import ExpertiseCard from '../components/ExpertiseCard'
+import Card from '../components/Card'
 
 function Expertise() {
   return (
-    <section>
+    <section id='expertise'>
       <div>
         <Heading heading='Expertise' />
       </div>
       <div className='card-wrapper'>
         {expertiseList.map((item, i) => (
-          <ExpertiseCard
+          <Card
             key={i}
             image={item.image}
             title={item.title}

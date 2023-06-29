@@ -1,24 +1,29 @@
 import Heading from '../components/Heading'
 import reviewsList from '../data/reviewsList.json'
-import ReviewsCard from '../components/ReviewsCard'
+import Card from '../components/Card'
+import SliderComp from '../components/SliderComp'
 
 function Reviews() {
   return (
-    <section>
+    <section id='reviews'>
       <div>
         <Heading heading='Client Reviews' />
       </div>
-      <div className='card-wrapper'>
+      <div>
+        <SliderComp version={1} list={reviewsList} />
+      </div>
+      {/* <div className='card-wrapper hidden lg:grid'>
         {reviewsList.map((item, i) => (
-          <ReviewsCard
+          <Card
             key={i}
             image={item.image}
-            title={item.title}
+            job={item.job}
             text={item.text}
+            title={item.title}
             alt={item.alt}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   )
 }

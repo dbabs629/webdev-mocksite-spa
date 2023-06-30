@@ -4,7 +4,7 @@ import Card from '../components/Card'
 
 function Expertise() {
   return (
-    <section id='expertise'>
+    <section id='expertise' className='bg-[#f6faff]'>
       <div>
         <Heading heading='Expertise' />
       </div>

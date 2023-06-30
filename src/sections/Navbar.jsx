@@ -1,7 +1,19 @@
+import { useState, useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
+
 function Navbar() {
-  let navMenu = () => {
-    console.log('here')
+  const [navBool, setnavBool] = useState(false)
+  const [dropDown, setdropDown] = useState('hidden')
+  let navMenu = (e) => {
+    !navBool ? setnavBool(true) : setnavBool(false)
+    console.log(dropDown)
   }
+
+  useEffect(() => {
+    navBool === true ? setdropDown('absolute') : setdropDown('hidden')
+  }, [navBool])
+
   return (
     <nav className='smooth absolute z-20 left-0 top-0 right-0 p-5 flex flex-row justify-between lg:px-0 lg:justify-around items-center text-white'>
       <div
@@ -10,7 +22,7 @@ function Navbar() {
         Webdevs
       </div>
 
-      {/* Mobile Menu */}
+      {/* Hamburger Mobile Menu */}
       <div
         id='mobile-menu'
         onClick={navMenu}
@@ -19,7 +31,36 @@ function Navbar() {
         <span className='block w-5 h-0.5 rounded-full bg-white' />
         <span className='block w-6 h-0.5 rounded-full bg-white' />
       </div>
-      <div className='absolute top-0 right-0 w-1/3 h-96 bg-gray-200 opacity-90'></div>
+
+      {/* Dropdown Menu */}
+      <div
+        className={`${dropDown} top-0 right-0 z-30 w-full py-2 flex flex-col bg-[#eef4ff] sm:hidden`}>
+        <div className='self-end p-2 opacity-100'>
+          <FontAwesomeIcon
+            className='text-3xl cursor-pointer p-2 text-gray-800'
+            icon={faCircleXmark}
+            onClick={navMenu}
+          />
+        </div>
+        <ul className='drop-down relative w-full flex flex-col text-gray-800 items-center space-y-6'>
+          <a onClick={navMenu} href='#services'>
+            <li>Services</li>
+          </a>
+          <a href='#work'>
+            <li>Work</li>
+          </a>
+          <a href='#team'>
+            <li>Team</li>
+          </a>
+          <a href='#reviews'>
+            <li>Reviews</li>
+          </a>
+          <a href='#contact'>
+            <li>Contact</li>
+          </a>
+        </ul>
+      </div>
+
       {/* Desktop/Tablet Menu */}
       <ul
         id='navList'

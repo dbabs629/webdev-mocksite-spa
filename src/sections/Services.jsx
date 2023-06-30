@@ -1,7 +1,7 @@
 import Heading from '../components/Heading'
 import servicesList from '../data/servicesList.json'
 import Card from '../components/Card'
-import SliderComp from '../components/SliderComp'
+import CardSlider from '../components/CardSlider'
 
 function Services() {
   return (
@@ -10,7 +10,7 @@ function Services() {
         <Heading heading='Services' />
       </div>
       <div className='lg:hidden'>
-        <SliderComp version={1} list={servicesList} />
+        <CardSlider list={servicesList} />
       </div>
       <div className='card-wrapper hidden lg:grid [&>*]:cursor-pointer [&>*:hover]:scale-105 [&>*:hover]:bg-blue-500 [&>*:hover]:text-white'>
         {servicesList.map((item, i) => (

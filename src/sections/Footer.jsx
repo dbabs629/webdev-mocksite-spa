@@ -18,16 +18,9 @@ function Footer() {
 
           <h5>Find Us</h5>
           <p>1872 Bay St, Toronto, ON, Canada, L9T 1A1</p>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
         </div>
         <div className='relative w-60 p-4 lg:h-40'>
           <span className='absolute top-0 right-0 left-0 bottom-0 bg-gray-300 opacity-25 rounded-lg' />
-
           <h5>Company</h5>
           <ul>
             <a href='/'>

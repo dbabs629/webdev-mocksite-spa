@@ -46,6 +46,10 @@
     src: url('fonts/Montserrat-Italic.ttf') format('truetype');
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI',
@@ -72,8 +76,17 @@
     @apply smooth hover:scale-110;
   }
 
+  a {
+    scroll-behavior: smooth;
+    @apply duration-1000 ease-in-out;
+  }
+
+  .drop-down li {
+    @apply text-base font-semibold text-white w-32 p-3 text-center rounded-3xl bg-[#2378FF] hover:bg-[#F49117] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:border-[#dd8316];
+  }
+
   section {
-    @apply w-full px-4 py-8 sm:py-16 lg:py-32 xl:px-40;
+    @apply scroll-smooth w-full px-4 py-8 sm:py-16 lg:py-32 xl:px-40;
   }
 
   footer {
@@ -83,7 +96,7 @@
   footer ::before {
     content: '';
     background-position: 25% 20%;
-    @apply overlay -z-20 w-full h-full bg-[url('../public/assets/global-image.jpg')] bg-no-repeat bg-cover bg-origin-content opacity-30;
+    @apply overlay -z-20 w-full h-full bg-[url('../public/assets/global-image-1.png')] bg-no-repeat bg-cover bg-origin-content opacity-30;
   }
 
   footer p,
@@ -96,8 +109,6 @@
     @apply hover:font-normal;
   }
 }
-
-/* mt-14 mb-24 md:mt-24 md:mb-36 lg:mt-36 lg:mb-44 xl:mt-48 xl:mb-60 */
 
 @layer components {
   .smooth {
@@ -112,16 +123,13 @@
     @apply w-full max-w-max mx-auto grid grid-cols-1 gap-6 lg:grid-cols-3;
   }
 
-  .card {
-    @apply relative max-w-xs w-full max-h-96 mx-auto py-4 flex flex-col gap-4 items-center text-center text-xs text-slate-800 border-2 border-[#f7f9ff] shadow-lg shadow-[#e8edfd] rounded-lg md:font-normal lg:text-sm;
-  }
-
   #work img {
-    @apply absolute top-0 left-0 right-0 bottom-0 w-full max-h-full h-full -z-20 object-cover rounded-lg;
+    @apply absolute top-0 left-0 right-0 bottom-0 w-full h-full -z-10 object-cover rounded-lg;
   }
 
   #team img {
-    @apply max-h-max h-auto w-full rounded-lg rounded-bl-none rounded-br-none;
+    object-position: 25% 10%;
+    @apply w-96 max-h-60 h-full top-0 left-0 right-0 m-0 pt-0 rounded-lg rounded-bl-none rounded-br-none;
   }
 
   #contact img {
@@ -129,20 +137,13 @@
     @apply w-16 h-16 xl:w-20 xl:h-20;
   }
 
+  #contact p {
+    @apply py-0;
+  }
+
   #reviews h6 {
     @apply pb-2;
   }
-
-  .active {
-    @apply scale-125 opacity-100;
-  }
-}
-
-.test {
-  @apply max-w-xs w-full max-h-96 mx-auto py-4 flex flex-col gap-4 items-center text-center text-xs text-slate-800 border-2 border-[#f7f9ff] shadow-lg shadow-[#e8edfd] rounded-lg md:font-normal lg:text-sm;
-}
-.test2 {
-  @apply absolute left-0 right-0 max-w-xs w-full mx-auto py-4 flex flex-col gap-4 items-center text-center text-xs text-slate-800 border-2 border-[#f7f9ff] shadow-lg shadow-[#e8edfd] rounded-lg md:font-normal lg:text-sm;
 }
 
 /* Specific Classes */
@@ -158,38 +159,20 @@
   @apply overlay -z-10 w-full h-full bg-no-repeat bg-cover bg-center opacity-75 sm:bg-repeat sm:bg-contain;
 }
 
+#work .card ::before {
+  content: '';
+  @apply absolute top-0 left-0 right-0 bottom-0 smooth bg-gradient-to-t from-zinc-300 to-70% to-transparent opacity-60 -z-10 rounded-lg;
+}
+
 #work .card {
-  @apply h-80;
+  @apply w-96 justify-end;
 }
-
-#work .card ::after {
-  content: '';
-  @apply absolute top-0 left-0 right-0 bottom-0 smooth -z-10 bg-gradient-to-t from-zinc-800 to-transparent rounded-lg;
-}
-
-#work .card:hover ::after {
-  content: '';
-  @apply smooth bg-zinc-300 opacity-50 rounded-lg;
-}
-/* SERVICES CARD GRADIENT ON HOVER */
-/* .services .card:hover ::after {
-  content: '';
-  background-color: white;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 20, 200, 0.7),
-    rgba(0, 35, 165, 0.6),
-    rgba(155, 65, 0, 0.6),
-    rgba(175, 75, 0, 0.7)
-  );
-  @apply overlay -z-10 max-w-full max-h-96 bg-no-repeat rounded-lg;
-} */
 
 #prev,
 #next {
   background-color: transparent;
   padding: 50px;
-  @apply w-24 p-3 rounded-full bg-[#2378FF] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:scale-105 hover:bg-[#F49117] hover:border-[#dd8316]  mx-2 active:scale-100;
+  @apply w-24 p-2 rounded-full text-4xl bg-[#2378FF] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:scale-105 hover:bg-[#F49117] hover:border-[#dd8316] mx-2 active:scale-100;
 }
 
 .animation-heading {
@@ -215,31 +198,5 @@
   }
   100% {
     transform: translateX(50px);
-  }
-}
-
-.animation-left {
-  animation: slide-left 1s ease-in-out;
-}
-
-@keyframes slide-left {
-  from {
-    transform: translateX(400px);
-  }
-  to {
-    transform: none;
-  }
-}
-
-.animation-right {
-  animation: slide-right 1s ease-in-out;
-}
-
-@keyframes slide-right {
-  from {
-    transform: translateX(-400px);
-  }
-  to {
-    transform: none;
   }
 }

@@ -4,11 +4,11 @@ import teamList from '../data/teamList.json'
 
 function Team() {
   return (
-    <section id='team'>
+    <section id='team' className='bg-[#f6faff]'>
       <div>
         <Heading heading='Meet The Team' />
       </div>
-      <div className='card-wrapper [&>*]:pt-0'>
+      <div className='card-wrapper'>
         {teamList.map((item, i) => (
           <Card
             key={i}

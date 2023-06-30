@@ -1,7 +1,7 @@
 import Heading from '../components/Heading'
 import workList from '../data/workList.json'
-import WorkCard from '../components/WorkCard'
-import SliderComp from '../components/SliderComp'
+import Card from '../components/Card'
+import CardSlider from '../components/CardSlider'
 
 function Work() {
   return (
@@ -10,11 +10,11 @@ function Work() {
         <Heading heading='Our Work' />
       </div>
       <div className='lg:hidden'>
-        <SliderComp list={workList} />
+        <CardSlider list={workList} />
       </div>
-      <div className='card-wrapper hidden lg:grid'>
+      <div className='card-wrapper hidden [&>*]:relative lg:grid [&>*]:bg-transparent'>
         {workList.map((item, i) => (
-          <WorkCard
+          <Card
             key={i}
             image={item.image}
             alt={item.alt}

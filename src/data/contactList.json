@@ -1,19 +1,19 @@
 [
     {
-        "image": "./assets/smartphone-1132677_1280.png",
-        "alt": "Looking through Eye glasses of a city landscape",
+        "image": "/assets/smartphone-1132677_1280-1.png",
+        "alt": "Smartphone Icon",
         "title": "Phone",
         "text": "+1 905 555 5255"
     },
     {
-        "image": "./assets/letter-1132703_1280.png",
-        "alt": "Smartphone screen with several application icons",
+        "image": "/assets/letter-1132703_1280-1.png",
+        "alt": "Mail Icon",
         "title": "Email",
         "text": "Webdev@demo.com"
     },
     {
-        "image": "./assets/location-1132648_1280.png",
-        "alt": "a man and a woman sitting, smiling and high fiving in at a table with papers and a laptop on it",
+        "image": "/assets/location-1132648_1280-1.png",
+        "alt": "Location Icon",
         "title": "Address",
         "text": "1872 Bay St, Toronto, ON, Canada, L9T 1A1"
     }

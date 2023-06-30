@@ -29,7 +29,7 @@ function SliderBtn({ name, count, setCount, listSize }) {
   return (
     <>
       <button id={name} onClick={eval(name)}>
-        {name}
+        {name === 'prev' ? '\u{1F844}' : '\u{1F846}'}
       </button>
     </>
   )

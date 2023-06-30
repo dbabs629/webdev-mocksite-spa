@@ -1,8 +1,23 @@
-function Card({ image, title, text, job, alt, addClass, addAnimation }) {
+
+function Card({
+  image,
+  tinyImage,
+  title,
+  text,
+  job,
+  alt,
+  addClass,
+  addAnimation,
+}) {
   return (
     <div
-      className={`max-w-xs w-full max-h-96 mx-auto py-4 flex flex-col gap-4 items-center text-center text-xs text-slate-800 border-2 border-[#f7f9ff] shadow-lg shadow-[#e8edfd] rounded-lg md:font-normal lg:text-sm ${addAnimation} ${addClass}`}>
+      className={`card static w-full max-w-xs max-h-72 h-72 lg:max-h-80 lg:h-80 mx-auto py-4 flex flex-col z-2 gap-4 justify-center items-center text-center text-xs text-slate-800 bg-white border-2 border-[#f7f9ff] shadow-lg shadow-[#e8edfd] my-4 lg:my-0 rounded-lg md:font-normal lg:text-sm ${addAnimation} ${addClass}`}>
       <div>
+        <img
+          className='hidden w-32 h-32 lg:w-36 lg:h-36 object-cover rounded-full'
+          src={image}
+          alt={alt}
+        />
         <img
           className='w-32 h-32 lg:w-36 lg:h-36 object-cover rounded-full'
           src={image}
@@ -10,9 +25,9 @@ function Card({ image, title, text, job, alt, addClass, addAnimation }) {
         />
       </div>
       <div>
-        <h3 className='px-2'>{title}</h3>
-        <h6 className='text-xs italic'>{job}</h6>
-        <p className='px-2'>{text}</p>
+        <h3 className='w-full px-4'>{title}</h3>
+        <h6 className='text-xs italic w-full px-4 pb-4'>{job}</h6>
+        <p className='w-full px-4 pb-4'>{text}</p>
       </div>
     </div>
   )

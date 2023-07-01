@@ -7,6 +7,7 @@ function Card({
   alt,
   addClass,
   addAnimation,
+  animateBg,
 }) {
   return (
     <div

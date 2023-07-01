@@ -4,7 +4,6 @@ import CardSlider from './CardSlider'
 
 function SectionContent({
   sectionId,
-  addSectionClass,
   heading,
   contentDataList,
   scrollEnabled,

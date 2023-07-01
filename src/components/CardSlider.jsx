@@ -41,7 +41,8 @@ function CardSlider({ list }) {
         title={item.title}
         text={item.text}
         job={item.job}
-        addClass={`absolute left-0 right-0 transform ease-in-out ${positionSlide}`}
+        animateBg={item.animateBg}
+        addClass={`absolute left-0 right-0 saturate-200 transform ease-in-out ${positionSlide}`}
       />
     )
   })

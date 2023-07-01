@@ -36,6 +36,7 @@ function CardSlider({ list }) {
         alt={item.alt}
         title={item.title}
         text={item.text}
+        job={item.job}
         addClass={`absolute left-0 right-0 transform ease-in-out ${positionSlide}`}
       />
     )
@@ -45,7 +46,7 @@ function CardSlider({ list }) {
     <>
       <div className='slider relative h-80 w-full'>{slideList}</div>
       <div className='w-full mx-auto text-center text-white'>
-        <div className='flex flex-row justify-center gap-6 my-8 lg:my-12'>
+        <div className='flex flex-row justify-center gap-6 my-8 lg:my-16'>
           {slideList.map((item, i) => {
             if (count === i) {
               return (
@@ -64,7 +65,7 @@ function CardSlider({ list }) {
             }
           })}
         </div>
-        <div className='flex flex-row justify-center gap-2'>
+        <div className='flex flex-row justify-center gap-2 mt-16'>
           <SliderBtn
             name='prev'
             count={count}

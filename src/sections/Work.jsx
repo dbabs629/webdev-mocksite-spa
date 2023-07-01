@@ -1,29 +1,18 @@
-import Heading from '../components/Heading'
 import workList from '../data/workList.json'
-import Card from '../components/Card'
-import CardSlider from '../components/CardSlider'
+import SectionContent from '../components/SectionContent'
 
 function Work() {
   return (
-    <section id='work'>
-      <div>
-        <Heading heading='Our Work' />
-      </div>
-      <div className='slider-wrapper lg:hidden'>
-        <CardSlider list={workList} />
-      </div>
-      <div className='card-wrapper hidden [&>*]:relative lg:grid [&>*]:bg-transparent'>
-        {workList.map((item, i) => (
-          <Card
-            key={i}
-            image={item.image}
-            alt={item.alt}
-            title={item.title}
-            text={item.text}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      <SectionContent
+        sectionId='work'
+        heading='Our Work'
+        contentDataList={workList}
+        scrollEnabled={true}
+        addSliderClass='slider-wrapper lg:hidden'
+        addWrapperClass='card-wrapper hidden lg:grid [&>*]:relative [&>*]:bg-transparent [&>*]:cursor-pointer [&>*:hover]:scale-105 [&>*:active]:scale-105 [&>*]:saturate-50 [&>*:hover]:saturate-200 [&>*:active]:saturate-200'
+      />
+    </>
   )
 }
 export default Work

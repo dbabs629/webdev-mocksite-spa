@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
+import DropDownMenu from '../components/DropDownMenu'
 
 function Navbar() {
   const [navBool, setnavBool] = useState(false)
-  const [dropDown, setdropDown] = useState('hidden')
 
   let navMenu = (e) => {
     !navBool ? setnavBool(true) : setnavBool(false)
@@ -14,12 +12,8 @@ function Navbar() {
     if (window.scrollY > 150) setnavBool(false)
   })
 
-  useEffect(() => {
-    navBool === true ? setdropDown('absolute') : setdropDown('hidden')
-  }, [navBool])
-
   return (
-    <nav className='smooth absolute z-20 left-0 top-0 right-0 p-5 flex flex-row justify-between lg:px-0 lg:justify-around items-center text-white'>
+    <nav className='smooth absolute z-30 left-0 top-0 right-0 p-5 flex flex-row justify-between lg:px-0 lg:justify-around items-center text-white'>
       <div
         id='logo'
         className='smooth text-lg font-bold md:text-2xl lg:text-3xl'>
@@ -36,34 +30,7 @@ function Navbar() {
         <span className='block w-6 h-0.5 rounded-full bg-white' />
       </div>
 
-      {/* Dropdown Menu */}
-      <div
-        className={`${dropDown} top-0 right-0 z-30 w-full flex flex-col bg-[#eef4ff] py-2 sm:hidden`}>
-        <div className='mx-8 mt-4 self-end p-2 opacity-100'>
-          <FontAwesomeIcon
-            className='text-3xl cursor-pointer p-2 text-gray-800'
-            icon={faCircleXmark}
-            onClick={navMenu}
-          />
-        </div>
-        <ul className='drop-down relative w-full flex flex-col text-gray-800 items-center space-y-6'>
-          <a onClick={navMenu} href='#services'>
-            <li>Services</li>
-          </a>
-          <a href='#work'>
-            <li>Work</li>
-          </a>
-          <a href='#team'>
-            <li>Team</li>
-          </a>
-          <a href='#reviews'>
-            <li>Reviews</li>
-          </a>
-          <a href='#contact'>
-            <li>Contact</li>
-          </a>
-        </ul>
-      </div>
+      <DropDownMenu navBool={navBool} setnavBool={setnavBool} />
 
       {/* Desktop/Tablet Menu */}
       <ul
@@ -71,6 +38,9 @@ function Navbar() {
         className='smooth hidden space-x-6 font-semibold cursor-pointer sm:flex lg:space-x-8 lg:text-lg'>
         <a href='#services'>
           <li>Services</li>
+        </a>
+        <a href='#expertise'>
+          <li>Expertise</li>
         </a>
         <a href='#work'>
           <li>Work</li>

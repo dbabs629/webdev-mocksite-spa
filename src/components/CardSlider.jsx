@@ -11,13 +11,17 @@ function CardSlider({ list }) {
     if (count === i) {
       positionSlide = 'translate-x-[0px] z-20 scale-110 duration-1000'
     } else if (i - 1 === count && i > count) {
-      positionSlide = 'translate-x-[22rem] z-10 opacity-30 duration-1000'
+      positionSlide =
+        'translate-x-[22rem] xl:translate-x-[28rem] z-10 opacity-30 duration-1000'
     } else if (i === list.length - 1 && count === 0) {
-      positionSlide = '-translate-x-[22rem] z-10 opacity-30 duration-1000'
+      positionSlide =
+        '-translate-x-[22rem] xl:-translate-x-[28rem] z-10 opacity-30 duration-1000'
     } else if (i === 0 && count === list.length - 1) {
-      positionSlide = 'translate-x-[22rem] z-10 opacity-30 duration-1000'
+      positionSlide =
+        'translate-x-[22rem] xl:translate-x-[28rem] z-10 opacity-30 duration-1000'
     } else if (i + 1 === count && i < count) {
-      positionSlide = '-translate-x-[22rem] z-10 opacity-30 duration-1000'
+      positionSlide =
+        '-translate-x-[22rem] xl:-translate-x-[28rem] z-10 opacity-30 duration-1000'
     } else if (i + 2 === count && i < count) {
       positionSlide = '-translate-x-[44rem] z-10 opacity-0 duration-1000'
     } else if (i - 2 === count && i > count) {
@@ -46,26 +50,26 @@ function CardSlider({ list }) {
     <>
       <div className='slider relative h-80 w-full'>{slideList}</div>
       <div className='w-full mx-auto text-center text-white'>
-        <div className='flex flex-row justify-center gap-6 my-8 lg:my-16'>
+        <div className='flex flex-row justify-center gap-6 my-8 lg:my-20'>
           {slideList.map((item, i) => {
             if (count === i) {
               return (
                 <span
                   key={i}
-                  className='w-5 h-5 bg-[#F49117] shadow-inner shadow-orange-300 opacity-100 rounded-full'
+                  className='w-5 h-5 lg:w-8 lg:h-8 bg-[#F49117] shadow-inner shadow-orange-300 opacity-100 rounded-full'
                 />
               )
             } else {
               return (
                 <span
                   key={i}
-                  className='w-5 h-5 bg-blue-600 opacity-100 rounded-full shadow-inner shadow-blue-300'
+                  className='w-5 h-5 lg:w-8 lg:h-8 bg-blue-600 opacity-100 rounded-full shadow-inner shadow-blue-300'
                 />
               )
             }
           })}
         </div>
-        <div className='flex flex-row justify-center gap-2 mt-16'>
+        <div className='flex flex-row justify-center gap-2 mt-8 p-4'>
           <SliderBtn
             name='prev'
             count={count}

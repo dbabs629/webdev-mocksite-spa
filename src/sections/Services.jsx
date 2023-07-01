@@ -1,29 +1,18 @@
-import Heading from '../components/Heading'
 import servicesList from '../data/servicesList.json'
-import Card from '../components/Card'
-import CardSlider from '../components/CardSlider'
+import SectionContent from '../components/SectionContent'
 
 function Services() {
   return (
-    <section id='services'>
-      <div>
-        <Heading heading='Services' />
-      </div>
-      <div className='slider-wrapper lg:hidden'>
-        <CardSlider list={servicesList} />
-      </div>
-      <div className='card-wrapper hidden lg:grid [&>*]:cursor-pointer [&>*:hover]:scale-105 [&>*:hover]:bg-blue-500 [&>*:hover]:text-white'>
-        {servicesList.map((item, i) => (
-          <Card
-            key={i}
-            image={item.image}
-            alt={item.alt}
-            title={item.title}
-            text={item.text}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      <SectionContent
+        sectionId='services'
+        heading='Services'
+        contentDataList={servicesList}
+        scrollEnabled={true}
+        addSliderClass='slider-wrapper lg:hidden'
+        addWrapperClass='card-wrapper hidden lg:grid [&>*]:cursor-pointer [&>*:hover]:scale-105 [&>*:active]:scale-105 [&>*:hover]:bg-blue-500 [&>*:active]:bg-blue-500 [&>*:focus]:bg-blue-500 [&>*:hover]:text-white [&>*:active]:text-white'
+      />
+    </>
   )
 }
 export default Services

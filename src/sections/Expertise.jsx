@@ -1,25 +1,18 @@
-import Heading from '../components/Heading'
 import expertiseList from '../data/expertiseList.json'
-import Card from '../components/Card'
+import SectionContent from '../components/SectionContent'
 
 function Expertise() {
   return (
-    <section id='expertise' className='bg-[#f6faff]'>
-      <div>
-        <Heading heading='Expertise' />
-      </div>
-      <div className='card-wrapper'>
-        {expertiseList.map((item, i) => (
-          <Card
-            key={i}
-            image={item.image}
-            title={item.title}
-            text={item.text}
-            alt={item.alt}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      <SectionContent
+        sectionId='expertise'
+        heading='Expertise'
+        contentDataList={expertiseList}
+        scrollEnabled={false}
+        addSliderClass='slider-wrapper'
+        addWrapperClass='card-wrapper'
+      />
+    </>
   )
 }
 export default Expertise

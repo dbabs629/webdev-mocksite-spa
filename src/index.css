@@ -76,12 +76,8 @@
     @apply smooth hover:scale-110;
   }
 
-  .drop-down li {
-    @apply text-base font-semibold text-white w-32 p-3 text-center rounded-3xl bg-[#2378FF] hover:bg-[#F49117] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:border-[#dd8316];
-  }
-
   section {
-    @apply w-full px-4 py-8 sm:py-16 lg:py-48 xl:px-40;
+    @apply w-full px-4 py-12 sm:py-16 lg:py-48 xl:px-40;
   }
 
   footer {
@@ -124,7 +120,17 @@
 
   #team img {
     object-position: 25% 10%;
-    @apply w-96 max-h-60 h-full top-0 left-0 right-0 m-0 pt-0 rounded-lg rounded-bl-none rounded-br-none;
+    @apply w-96 max-h-80 h-full top-0 left-0 right-0 rounded-lg rounded-bl-none rounded-br-none;
+  }
+
+  #team .card {
+    @apply max-w-sm max-h-full h-96;
+  }
+
+  #team,
+  #expertise,
+  #contact {
+    @apply bg-[#f6faff];
   }
 
   #contact img {
@@ -138,6 +144,10 @@
 
   .slider-wrapper {
     @apply overflow-hidden;
+  }
+
+  .drop-down li {
+    @apply text-base font-semibold text-white w-32 p-3 text-center rounded-3xl bg-[#2378FF] hover:bg-[#F49117] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:border-[#dd8316];
   }
 }
 
@@ -165,9 +175,7 @@
 
 #prev,
 #next {
-  background-color: transparent;
-  padding: 50px;
-  @apply w-24 p-2 rounded-full text-xl bg-[#2378FF] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:scale-105 hover:bg-[#F49117] hover:border-[#dd8316] mx-2 active:scale-100;
+  @apply w-24 p-2 lg:w-32 lg:p-4 rounded-full text-xl bg-[#2378FF] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:scale-105 hover:bg-[#F49117] hover:border-[#dd8316] mx-2 active:scale-105 active:bg-[#F49117] active:border-[#dd8316] lg:active:scale-100;
 }
 
 .animation-heading {

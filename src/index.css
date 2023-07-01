@@ -147,7 +147,7 @@
   }
 
   .drop-down li {
-    @apply text-base font-semibold text-white w-32 p-3 text-center rounded-3xl bg-[#2378FF] hover:bg-[#F49117] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:border-[#dd8316];
+    @apply text-base font-semibold text-white w-32 p-3 text-center rounded-3xl bg-[#2378FF] hover:bg-[#F49117] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:border-[#dd8316] active:border-[#dd8316] active:bg-[#F49117] focus:border-[#dd8316] focus:bg-[#F49117];
   }
 }
 

@@ -8,10 +8,6 @@ function Navbar() {
     !navBool ? setnavBool(true) : setnavBool(false)
   }
 
-  window.addEventListener('scroll', (e) => {
-    if (window.scrollY > 150) setnavBool(false)
-  })
-
   return (
     <nav className='smooth absolute z-30 left-0 top-0 right-0 p-5 flex flex-row justify-between lg:px-0 lg:justify-around items-center text-white'>
       <div

@@ -9,12 +9,21 @@ function DropDownMenu({ navBool, setnavBool }) {
     !navBool ? setnavBool(true) : setnavBool(false)
   }
 
+  window.addEventListener('scroll', (e) => {
+    if (window.scrollY > 150) setnavBool(false)
+  })
+
   useEffect(() => {
-    navBool === true ? setdropDown('absolute') : setdropDown('hidden')
+    navBool === true
+      ? setdropDown('transform translate-y-[0px] opacity-100 duration-1000')
+      : setdropDown(
+          'invisible transform -translate-y-[25rem] opacity-0 duration-1000'
+        )
   }, [navBool])
+
   return (
     <div
-      className={`${dropDown} top-0 right-0 w-full flex flex-col bg-[#eef4ff] py-2 sm:hidden`}>
+      className={`${dropDown} absolute top-0 right-0 w-full flex flex-col bg-[#eef4ff] py-2 sm:hidden`}>
       <div className='mx-8 mt-4 self-end p-2 opacity-100'>
         <FontAwesomeIcon
           className='text-3xl cursor-pointer p-2 text-gray-800'

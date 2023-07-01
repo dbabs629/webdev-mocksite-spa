@@ -10,12 +10,9 @@ function Navbar() {
     !navBool ? setnavBool(true) : setnavBool(false)
   }
 
-  // window.addEventListener('load', (e) => {
-  //   window.location.href = window.location.href.replace(
-  //     window.location.hash,
-  //     ''
-  //   )
-  // })
+  window.addEventListener('scroll', (e) => {
+    if (window.scrollY > 150) setnavBool(false)
+  })
 
   useEffect(() => {
     navBool === true ? setdropDown('absolute') : setdropDown('hidden')

@@ -9,7 +9,7 @@ function Work() {
       <div>
         <Heading heading='Our Work' />
       </div>
-      <div className='lg:hidden'>
+      <div className='slider-wrapper lg:hidden'>
         <CardSlider list={workList} />
       </div>
       <div className='card-wrapper hidden [&>*]:relative lg:grid [&>*]:bg-transparent'>

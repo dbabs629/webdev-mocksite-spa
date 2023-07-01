@@ -1,4 +1,3 @@
-
 function Card({
   image,
   tinyImage,

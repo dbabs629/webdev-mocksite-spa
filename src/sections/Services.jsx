@@ -9,7 +9,7 @@ function Services() {
       <div>
         <Heading heading='Services' />
       </div>
-      <div className='lg:hidden'>
+      <div className='slider-wrapper lg:hidden'>
         <CardSlider list={servicesList} />
       </div>
       <div className='card-wrapper hidden lg:grid [&>*]:cursor-pointer [&>*:hover]:scale-105 [&>*:hover]:bg-blue-500 [&>*:hover]:text-white'>

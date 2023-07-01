@@ -76,11 +76,6 @@
     @apply smooth hover:scale-110;
   }
 
-  a {
-    scroll-behavior: smooth;
-    @apply duration-1000 ease-in-out;
-  }
-
   .drop-down li {
     @apply text-base font-semibold text-white w-32 p-3 text-center rounded-3xl bg-[#2378FF] hover:bg-[#F49117] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:border-[#dd8316];
   }
@@ -144,6 +139,10 @@
   #reviews h6 {
     @apply pb-2;
   }
+
+  .slider-wrapper {
+    @apply overflow-hidden;
+  }
 }
 
 /* Specific Classes */
@@ -172,7 +171,7 @@
 #next {
   background-color: transparent;
   padding: 50px;
-  @apply w-24 p-2 rounded-full text-4xl bg-[#2378FF] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:scale-105 hover:bg-[#F49117] hover:border-[#dd8316] mx-2 active:scale-100;
+  @apply w-24 p-2 rounded-full text-xl bg-[#2378FF] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:scale-105 hover:bg-[#F49117] hover:border-[#dd8316] mx-2 active:scale-100;
 }
 
 .animation-heading {

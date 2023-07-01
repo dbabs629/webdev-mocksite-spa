@@ -8,7 +8,7 @@ function Reviews() {
       <div>
         <Heading heading='Client Reviews' />
       </div>
-      <div>
+      <div className='slider-wrapper'>
         <CardSlider list={reviewsList} />
       </div>
       {/* <div className='card-wrapper hidden lg:grid'>

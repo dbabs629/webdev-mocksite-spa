@@ -5,10 +5,17 @@ import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
 function Navbar() {
   const [navBool, setnavBool] = useState(false)
   const [dropDown, setdropDown] = useState('hidden')
+
   let navMenu = (e) => {
     !navBool ? setnavBool(true) : setnavBool(false)
-    console.log(dropDown)
   }
+
+  // window.addEventListener('load', (e) => {
+  //   window.location.href = window.location.href.replace(
+  //     window.location.hash,
+  //     ''
+  //   )
+  // })
 
   useEffect(() => {
     navBool === true ? setdropDown('absolute') : setdropDown('hidden')
@@ -34,8 +41,8 @@ function Navbar() {
 
       {/* Dropdown Menu */}
       <div
-        className={`${dropDown} top-0 right-0 z-30 w-full py-2 flex flex-col bg-[#eef4ff] sm:hidden`}>
-        <div className='self-end p-2 opacity-100'>
+        className={`${dropDown} top-0 right-0 z-30 w-full flex flex-col bg-[#eef4ff] py-2 sm:hidden`}>
+        <div className='mx-8 mt-4 self-end p-2 opacity-100'>
           <FontAwesomeIcon
             className='text-3xl cursor-pointer p-2 text-gray-800'
             icon={faCircleXmark}

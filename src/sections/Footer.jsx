@@ -41,7 +41,7 @@ function Footer() {
         <span className='overlay w-16 mx-auto border-t' />
         <p className='text-xs font-light'>
           <FontAwesomeIcon className='px-2' icon={faCopyright} />
-          2023 Webdevs
+          2023 Webdevs Mocksite <br /> made by Daniel Babin for Portfolio
         </p>
       </div>
     </footer>

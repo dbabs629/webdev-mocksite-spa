@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Card from './Card'
+import SlideIndexDisplay from './SlideIndexDisplay'
 
 import SliderBtn from './SliderBtn'
 
@@ -49,26 +50,12 @@ function CardSlider({ list }) {
 
   return (
     <>
-      <div className='slider relative h-80 w-full'>{slideList}</div>
+      <div id='slider' className='relative h-80 w-full'>
+        {slideList}
+      </div>
       <div className='w-full mx-auto text-center text-white'>
         <div className='flex flex-row justify-center gap-6 my-8 lg:my-20'>
-          {slideList.map((item, i) => {
-            if (count === i) {
-              return (
-                <span
-                  key={i}
-                  className='w-5 h-5 lg:w-8 lg:h-8 bg-[#F49117] shadow-inner shadow-orange-300 opacity-100 rounded-full'
-                />
-              )
-            } else {
-              return (
-                <span
-                  key={i}
-                  className='w-5 h-5 lg:w-8 lg:h-8 bg-blue-600 opacity-100 rounded-full shadow-inner shadow-blue-300'
-                />
-              )
-            }
-          })}
+          <SlideIndexDisplay list={list} count={count} />
         </div>
         <div className='flex flex-row justify-center gap-2 mt-8 p-4'>
           <SliderBtn

@@ -10,7 +10,7 @@ function CardSlider({ list }) {
   let slideList = list.map((item, i) => {
     let positionSlide
     if (count === i) {
-      positionSlide = 'translate-x-[0px] z-20 scale-110 duration-1000'
+      positionSlide = 'translate-x-[0px] z-20 md:scale-110 duration-1000'
     } else if (i - 1 === count && i > count) {
       positionSlide =
         'translate-x-[22rem] xl:translate-x-[28rem] z-10 opacity-30 duration-1000'
@@ -50,11 +50,11 @@ function CardSlider({ list }) {
 
   return (
     <>
-      <div id='slider' className='relative h-80 w-full'>
+      <div id='slider' className='relative w-full h-96'>
         {slideList}
       </div>
       <div className='w-full mx-auto text-center text-white'>
-        <div className='flex flex-row justify-center gap-6 my-8 lg:my-20'>
+        <div className='flex flex-row justify-center gap-4 md:gap-6'>
           <SlideIndexDisplay list={list} count={count} />
         </div>
         <div className='flex flex-row justify-center gap-2 mt-8 p-4'>

@@ -10,7 +10,8 @@ function Footer() {
           <span className='absolute top-0 right-0 left-0 bottom-0 bg-gray-300 opacity-25 rounded-lg' />
           <h5>Webdevs</h5>
           <p>
-            Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor.
+            We value transparency and open communication, keeping you informed
+            at every stage of the development process.
           </p>
         </div>
         <div className='relative w-60 p-4 lg:h-40'>
@@ -39,9 +40,9 @@ function Footer() {
       </div>
       <div className='relative space-y-6 mt-10'>
         <span className='overlay w-16 mx-auto border-t' />
-        <p className='text-xs font-light'>
+        <p className='w-48 text-xs font-light text-center'>
           <FontAwesomeIcon className='px-2' icon={faCopyright} />
-          2023 Webdevs Mocksite <br /> made by Daniel Babin for Portfolio
+          2023 made by Daniel Babin
         </p>
       </div>
     </footer>

@@ -77,7 +77,7 @@
   }
 
   section {
-    @apply w-full px-4 py-12 sm:py-16 lg:py-48 xl:px-40;
+    @apply w-full min-h-max py-10 sm:py-24 lg:py-0 lg:h-screen lg:flex lg:flex-col lg:justify-center;
   }
 
   footer {
@@ -111,43 +111,20 @@
   }
 
   .card-wrapper {
-    @apply w-full max-w-max mx-auto grid grid-cols-1 gap-6 lg:grid-cols-3;
-  }
-
-  #work img {
-    @apply absolute top-0 left-0 right-0 bottom-0 w-full h-full -z-10 object-cover rounded-lg;
-  }
-
-  #team img {
-    object-position: 25% 10%;
-    @apply w-96 max-h-80 h-full top-0 left-0 right-0 rounded-lg rounded-bl-none rounded-br-none;
-  }
-
-  #team .card {
-    @apply max-w-sm max-h-full h-96;
-  }
-
-  #team,
-  #expertise,
-  #contact {
-    @apply bg-[#f6faff];
-  }
-
-  #contact img {
-    min-width: 4rem;
-    @apply w-16 h-16 xl:w-20 xl:h-20;
-  }
-
-  #contact p {
-    @apply py-0;
+    @apply grid grid-cols-1 gap-6 lg:grid-cols-3 md:px-6 lg:max-w-max lg:mx-auto;
   }
 
   .slider-wrapper {
-    @apply overflow-hidden;
+    @apply overflow-hidden max-h-max flex flex-col justify-center;
   }
 
   .drop-down li {
     @apply text-base font-semibold text-white w-32 p-3 text-center rounded-3xl bg-[#2378FF] hover:bg-[#F49117] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:border-[#dd8316] active:border-[#dd8316] active:bg-[#F49117] focus:border-[#dd8316] focus:bg-[#F49117];
+  }
+
+  #prev,
+  #next {
+    @apply w-24 p-2 lg:w-32 lg:p-4 rounded-full text-xl bg-[#2378FF] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:scale-105 hover:bg-[#F49117] hover:border-[#dd8316] mx-2 active:scale-105 active:bg-[#F49117] active:border-[#dd8316] lg:active:scale-100;
   }
 }
 
@@ -164,18 +141,85 @@
   @apply overlay -z-10 w-full h-full bg-no-repeat bg-cover bg-center opacity-75 sm:bg-repeat sm:bg-contain;
 }
 
-#work .card ::before {
-  content: '';
-  @apply absolute top-0 left-0 right-0 bottom-0 smooth bg-gradient-to-t from-zinc-300 to-70% to-transparent opacity-60 -z-10 rounded-lg;
+#services .card {
+  @apply saturate-200;
+}
+
+#services .card:hover {
+  @apply cursor-pointer bg-blue-500 text-white duration-150 saturate-200;
+}
+
+#services .card:hover img {
+  @apply hidden;
+}
+
+#services .card:hover p {
+  @apply block px-8;
+}
+
+#services .card p {
+  @apply hidden;
+}
+
+#work img {
+  @apply absolute top-0 left-0 right-0 bottom-0 w-full h-full -z-10 object-cover rounded-lg;
 }
 
 #work .card {
-  @apply w-96 justify-end;
+  @apply bg-transparent cursor-pointer saturate-50;
 }
 
-#prev,
-#next {
-  @apply w-24 p-2 lg:w-32 lg:p-4 rounded-full text-xl bg-[#2378FF] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:scale-105 hover:bg-[#F49117] hover:border-[#dd8316] mx-2 active:scale-105 active:bg-[#F49117] active:border-[#dd8316] lg:active:scale-100;
+#work .card:hover {
+  @apply duration-150 saturate-200 lg:scale-105;
+}
+
+#team .img-wrapper {
+  @apply h-[80%];
+}
+
+#team img {
+  object-position: 25% 10%;
+  @apply w-96 h-full rounded-lg rounded-bl-none rounded-br-none;
+}
+
+#reviews .card {
+  @apply lg:w-80;
+}
+
+#work .card ::before {
+  content: '';
+  @apply absolute top-0 left-0 right-0 bottom-0 smooth bg-gradient-to-t from-zinc-300 to-70% to-transparent hover:from-black hover:to-transparent opacity-60 -z-10 rounded-lg;
+}
+
+#work .card {
+  @apply justify-end py-4 hover:text-white;
+}
+
+#work .card p {
+  @apply hidden;
+}
+
+#work .card:hover p {
+  @apply block;
+}
+
+#team,
+#expertise,
+#contact {
+  @apply bg-[#f6faff];
+}
+
+#contact .card {
+  @apply max-h-40 px-6 py-2 space-x-2 mx-auto flex-row justify-start text-start sm:max-h-48 md:flex-col md:justify-center md:text-center md:gap-0;
+}
+
+#contact .card h3 {
+  @apply px-2;
+}
+
+#contact img {
+  min-width: 4rem;
+  @apply w-16 h-16 xl:w-20 xl:h-20;
 }
 
 .animation-heading {

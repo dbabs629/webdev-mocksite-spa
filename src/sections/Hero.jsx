@@ -1,13 +1,17 @@
 function Hero() {
   return (
-    <section id='hero' className='hero relative w-full'>
+    <section
+      id='hero'
+      className='hero relative w-full h-full flex items-center py-32 lg:py-0 lg:h-screen'>
       <span className='hero-span' />
-      <div className='w-full flex flex-col gap-4 pt-10 md:gap-8 text-center text-white'>
+      <div className='w-full flex flex-col gap-4 md:gap-8 text-center text-white'>
         <h1 className='smooth text-3xl font-bold md:text-4xl lg:text-extrabold lg:text-5xl'>
           Build <br className='xl:hidden' /> The Right <br /> Digital Product
         </h1>
-        <p className='smooth max-w-xs mx-auto text-sm font-light sm:font-normal md:text-base lg:max-w-md lg:w-1/2 lg:text-xl'>
-          Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod.
+        <p className='smooth max-w-sm px-1 sm:px-0 mx-auto text-sm font-light sm:font-normal md:text-base md:max-w-lg md:w-2/3 lg:text-xl'>
+          We are a leading web development company committed to delivering
+          exceptional digital experiences and creating innovative solutions that
+          drive business growth.
         </p>
         <button
           onClick={() => (window.location = '#contact')}

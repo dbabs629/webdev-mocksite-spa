@@ -2,19 +2,19 @@
     {
         "image": "/assets/dbabs_photo_face_subtle_smile_female_professional_wearing_suit_86878669-cf75-4e96-8983-41e398d98b8c.png",
         "alt": "",
-        "title": "Fredrick Poppins",
-        "job": "Vice President of Global Management"
+        "title": "Sarah Thompson",
+        "job": "UI/UX Designer"
     },
     {
         "image": "/assets/dbabs_photo_face_smile_female_professional_wearing_suit_82038beb-62d5-4409-8fbb-b866fb0571e2.png",
         "alt": "",
-        "title": "Fredrick Poppins",
-        "job": "Vice President of Global Management"
+        "title": "Emily Poppins",
+        "job": "Front-end Developer"
     },
     {
         "image": "/assets/dbabs_profile_photo_smiling_in_suit_10644a80-956e-491f-9fce-33f4f8891881.png",
         "alt": "",
-        "title": "Fredrick Poppins",
-        "job": "Vice President of Global Management"
+        "title": "Mark Johnson",
+        "job": "Back-end Developer"
     }
 ]

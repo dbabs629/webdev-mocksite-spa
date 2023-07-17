@@ -13,9 +13,9 @@ function Card({ image, title, text, job, alt, addClass, addAnimation }) {
         />
       </div>
       <div>
-        <h3 className='w-full 2xl:text-base'>{title}</h3>
-        {job && <h6 className='w-full text-xs italic 2xl:text-sm'>{job}</h6>}
-        {text && <p className='w-full pt-1 px-2 text-xs 2xl:text-sm'>{text}</p>}
+        <h3 className='w-full'>{title}</h3>
+        {job && <h6 className='w-full text-xs italic'>{job}</h6>}
+        {text && <p className='w-full pt-1 px-2 text-xs'>{text}</p>}
       </div>
     </div>
   )

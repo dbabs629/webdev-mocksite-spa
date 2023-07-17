@@ -77,7 +77,7 @@
   }
 
   section {
-    @apply w-full min-h-max py-10 sm:py-24 lg:py-0 lg:h-screen lg:flex lg:flex-col lg:justify-center;
+    @apply w-full min-h-max py-24 lg:h-screen lg:flex lg:flex-col lg:justify-center;
   }
 
   footer {

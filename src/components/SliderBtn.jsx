@@ -26,10 +26,14 @@ function SliderBtn({ name, count, setCount, listSize }) {
     await delay(600)
     e.target.disabled = false
   }
-  
+
+  const slideClicked = () => {
+    name === 'prev' ? prev() : next()
+  }
+
   return (
     <>
-      <button id={name} onClick={name === 'prev' ? prev() : next()}>
+      <button id={name} onClick={slideClicked()}>
         {name}
       </button>
     </>

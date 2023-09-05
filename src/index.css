@@ -93,7 +93,7 @@
   footer p,
   li,
   a {
-    @apply text-xs font-thin sm:text-sm xl:text-base;
+    @apply text-xs font-thin sm:text-sm;
   }
 
   footer li {
@@ -124,7 +124,7 @@
 
   #prev,
   #next {
-    @apply w-24 p-2 lg:w-32 lg:p-4 rounded-full text-xl bg-[#2378FF] border-[#1e67db] border-r-2 border-b-2 shadow-lg hover:scale-105 hover:bg-[#F49117] hover:border-[#dd8316] mx-2 active:scale-105 active:bg-[#F49117] active:border-[#dd8316] lg:active:scale-100;
+    @apply w-16 p-2 lg:w-24 text-xl bg-[#2378FF] opacity-20 shadow-lg hover:opacity-50 active:opacity-50;
   }
 }
 
@@ -146,7 +146,7 @@
 }
 
 #services .card:hover {
-  @apply cursor-pointer bg-blue-500 text-white duration-150 saturate-200;
+  @apply bg-blue-500 text-white duration-150 saturate-200;
 }
 
 #services .card:hover img {
@@ -166,7 +166,7 @@
 }
 
 #work .card {
-  @apply bg-transparent cursor-pointer saturate-50;
+  @apply bg-transparent saturate-50 shadow-none border-none;
 }
 
 #work .card:hover {
@@ -179,7 +179,15 @@
 
 #team img {
   object-position: 25% 10%;
-  @apply w-96 h-full rounded-lg rounded-bl-none rounded-br-none;
+  @apply max-w-full w-96 max-h-96 h-full rounded-lg rounded-bl-none rounded-br-none;
+}
+
+#team .card {
+  @apply justify-between pb-2;
+}
+
+#team .card p {
+  @apply top-0;
 }
 
 #reviews .card {

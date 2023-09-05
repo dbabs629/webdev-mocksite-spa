@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Card from './Card'
 import SlideIndexDisplay from './SlideIndexDisplay'
-
 import SliderBtn from './SliderBtn'
 
 function CardSlider({ list }) {
@@ -50,26 +49,26 @@ function CardSlider({ list }) {
 
   return (
     <>
-      <div id='slider' className='relative w-full h-96'>
+      <div id='slider' className='relative w-full h-96 py-4'>
         {slideList}
-      </div>
-      <div className='w-full mx-auto text-center text-white'>
-        <div className='flex flex-row justify-center gap-4 md:gap-6'>
-          <SlideIndexDisplay list={list} count={count} />
-        </div>
-        <div className='flex flex-row justify-center gap-2 mt-8 p-4'>
-          <SliderBtn
-            name='prev'
-            count={count}
-            setCount={setCount}
-            listSize={list.length}
-          />
-          <SliderBtn
-            name='next'
-            count={count}
-            setCount={setCount}
-            listSize={list.length}
-          />
+        <div className='w-full mx-auto text-center text-white'>
+          <div className='absolute bottom-0 left-0 right-0 flex flex-row justify-center gap-4 md:gap-6'>
+            <SlideIndexDisplay list={list} count={count} />
+          </div>
+          <div className='absolute h-[100%] z-20 flex flex-row justify-between top-0 left-0 w-full'>
+            <SliderBtn
+              name='prev'
+              count={count}
+              setCount={setCount}
+              listSize={list.length}
+            />
+            <SliderBtn
+              name='next'
+              count={count}
+              setCount={setCount}
+              listSize={list.length}
+            />
+          </div>
         </div>
       </div>
     </>

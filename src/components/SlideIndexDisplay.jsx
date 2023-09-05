@@ -6,14 +6,14 @@ function SlideIndexDisplay({ list, count }) {
           return (
             <span
               key={i}
-              className='w-5 h-5 lg:w-8 lg:h-8 bg-[#F49117] shadow-inner shadow-orange-300 opacity-100 rounded-full'
+              className='w-5 h-5 lg:w-8 lg:h-8 bg-[#F49900] opacity-100 rounded-full'
             />
           )
         } else {
           return (
             <span
               key={i}
-              className='w-5 h-5 lg:w-8 lg:h-8 bg-blue-600 opacity-100 rounded-full shadow-inner shadow-blue-300'
+              className='w-5 h-5 lg:w-8 lg:h-8 bg-[#2378FF] opacity-40 rounded-full shadow-inner shadow-[#2378FF]'
             />
           )
         }

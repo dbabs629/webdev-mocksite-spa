@@ -64,6 +64,10 @@
       monospace;
   }
 
+  img {
+    pointer-events: none;
+  }
+
   h3 {
     @apply text-xs font-semibold sm:text-sm md:text-base;
   }
@@ -124,7 +128,7 @@
 
   #prev,
   #next {
-    @apply w-16 p-2 lg:w-24 text-xl bg-[#2378FF] opacity-20 shadow-lg hover:opacity-50 active:opacity-50;
+    @apply hidden p-2 rounded-full sm:rounded-none w-24 text-xl bg-[#2378FF] opacity-20 shadow-lg hover:opacity-50 active:opacity-50 sm:block;
   }
 }
 
